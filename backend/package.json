@@ -12,12 +12,19 @@
   "type": "commonjs",
   "devDependencies": {
     "@types/node": "^26.5.0",
+    "dotenv": "^17.4.2",
     "nodemon": "^3.1.14",
+    "prisma": "^7.10.0",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3"
   },
   "dependencies": {
     "@apollo/server": "^5.5.1",
+    "@prisma/adapter-better-sqlite3": "^7.10.0",
+    "@prisma/client": "^7.10.0",
     "graphql": "^16.14.2"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true
   }
 }
