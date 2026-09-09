@@ -31,7 +31,7 @@ const typeDefs = `#graphql
 `;
 
 const resolvers = {
-  // DateTimeはISO文字列で保持する
+  // DateTimeはISO文字列で取得する
   Todo: {
     createdAt: (parent: { createdAt: Date }) => parent.createdAt.toISOString(),
   },
