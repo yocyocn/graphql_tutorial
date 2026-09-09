@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: .docker/node
+    image: graphql_tutorial_node:dev
+    container_name: graphql_tutorial_backend
+    working_dir: /app
+    volumes:
+      - ./backend:/app
+    ports:
+      - "4000:4000"
+    # 常駐させ、docker compose exec で入って作業する
+    command: sleep infinity
+    init: true
+
+  frontend:
+    build:
+      context: .docker/node
+    image: graphql_tutorial_node:dev
+    container_name: graphql_tutorial_frontend
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "5173:5173"
+    command: sleep infinity
+    init: true
