@@ -7,6 +7,10 @@
 
 # 構成
 
+- コンテナは共通
+- ApolloとReactの開発用サーバを別のポートに立てる
+
+![Dockerの構成](./img/Docker構成.png)
 
 
 # 使い方
@@ -23,13 +27,16 @@ $ npm install
 $ npm run start
 ```
 
-http://localhost:4000にアクセスする
+http://localhost:4000 にアクセスする
 
 Reactを動かす
 ```
 $ docker compose exec frontend bash
+$ npm install
+# npm run dev
 ```
 
+http://localhost:5173 にアクセスする
 
 # 参考
 
